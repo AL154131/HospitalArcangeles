@@ -35,3 +35,26 @@
 #banner a:hover{
     background: rgba(30, 144, 255, 0.7)
 }
+
+@media (min-width: 480px){
+    #banner h2{
+        font-size: 40px;
+    }
+    
+    #banner a{
+        margin-top: 25px;
+    }
+    
+}
+
+@media (min-width: 768px){
+    #banner{
+        height: 500px;
+        overflow: hidden
+    }
+    #banner img{
+        height: auto;
+        margin-top: -50px;
+    }
+}
+
