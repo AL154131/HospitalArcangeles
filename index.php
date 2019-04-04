@@ -8,17 +8,10 @@
 </head>
 <body>
     <header> 
-        <div class="contenedor">
-            <h1 class="icon-hospital">Hospital Arcangeles</h1>
-            <input type="checkbox" id="menu-bar">
-            <label class="icon-menu-outline" for="menu-bar"></label>
-            <nav class="menu">
-                <a href="">Inicio</a>
-                <a href="">Nosotros</a>
-                <a href="">Contacto</a>
-                <a href="">Departamentos</a>
-            </nav>
-        </div>
+        <?php 
+            include("Librerias/EncabezadoPie.phtml"); 
+            cabecera();
+        ?>
     </header>
     
     <main>
@@ -81,15 +74,9 @@
     </section>
     
     <footer>
-        <div class="contenedor">
-            <p class="copy">Hospital Eden &copy; 2019</p>
-            <div class="sociales">
-                <a class="icon-gplus-squared" chref=""></a>
-                <a class="icon-linkedin-1"href=""></a>
-                <a class="icon-mail-alt" href=""></a>
-                <a class="icon-twitter-squared" href=""></a>
-            </div>
-        </div>
+        <?php
+            pie(); 
+        ?>
     </footer>
     
 </body>
