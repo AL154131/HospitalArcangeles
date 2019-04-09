@@ -75,7 +75,7 @@
     
     <footer>
         <?php
-            pie(); 
+            pie();
         ?>
     </footer>
     

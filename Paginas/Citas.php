@@ -11,6 +11,9 @@
     	}
     </style>
 </head>
+<?php 
+	include('../Librerias/Conexion.php');  
+?>
 
 <body>
 	<header>
@@ -96,20 +99,14 @@
 
 			Doctor:<select name="nombreMedico"> 
 				<?php 
-					include('../Librerias/Conexion.php');
 					include('../Librerias/ListaMedicos.php'); 
 				?>
-				<!--<option>Jun Martinez Soto</option>
-				<option>Medico2</option>-->
 			</select> <br><br>
 
 			Especialidad: <select name="especialidad"> 
 				<?php
 					include('../Librerias/ListaEspecialidades.php');
 				?>
-				<!--
-				<option>Especialidad1</option>
-				<option>Especialidad2</option>-->
 			</select> <br><br>
 
 			<input type="submit" name="confirmarCita"> <br>
@@ -119,16 +116,15 @@
 		</form>
 		</center>
 	</section>
-	<?php 
-		if ($_POST) {	
-			include('../Librerias/CrearCita.php');
-		}
+	<?php
+	if ($_POST) {
+		include('../Librerias/CrearCita.php');
+	}
 	?>
 	<footer>
 		<?php
-			pie(); 
+			pie();
 		?>
 	</footer>
-
 </body>
 </html>
