@@ -1,8 +1,13 @@
 <?php
-	$consultaNombreMedicos = "SELECT nombre from medicos";
+	include('Conexion.php');
+	$consultaNombreMedicos = "SELECT nombre from medicos WHERE especialidad = '$_POST[especialidad]'";
 	$resultado = $mysqli -> query($consultaNombreMedicos);
 
+	$codigoHtml = "";
+
 	while ($fila = $resultado -> fetch_assoc()) {
-		echo '<option>' . $fila['nombre'] . '</option>';
+		$codigoHtml = $codigoHtml . "<option>" . $fila['nombre'] . "</option>";
 	}
+	$mysqli -> close();
+	echo $codigoHtml;
 ?>

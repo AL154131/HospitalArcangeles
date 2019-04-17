@@ -1,0 +1,34 @@
+#Formulario {
+	display: flex;
+	width: 30%;
+	margin-top: 80px; /*Medida del alto del header*/
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	padding: 10px;
+	border: 5px solid dodgerblue;
+	background-color: dodgerblue;
+	color: white;
+}
+#Formulario input, select { height: 40px; }
+#Formulario p {
+	display: inline-flex;
+	padding-top: 5px;
+	width: 100%;
+	
+}
+#datosPaciente {justify-content: space-between;}
+#datosPaciente input {width: 49%;}
+
+#areaConsulta, #medicosDeArea, #horaConsulta {flex-direction: column;}
+#areaConsulta select, #medicosDeArea select {width: 100%;}
+
+#fecha {flex-wrap: wrap; width: 16.6%;}
+#fecha label {width: 100%;}
+#fecha select {width: 16.6%;}
+
+#horaConsulta select {width: 16.6%;}
+
+#boton {justify-content: flex-end;}
+#boton input {padding: 3px;}
+
