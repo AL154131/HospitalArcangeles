@@ -16,7 +16,7 @@
     
     <main>
         <section id="banner">
-            <img src="Imagenes/Banner.jpg" alt="">
+            <img src="Imagenes/Banner/1.jpg" alt="">
             <div class="contenedor">
                 <h2>Protegiendo su salud</h2>
                 <p>La mejor proteccion para sus seres queridos</p>
@@ -28,7 +28,7 @@
     <section class="contenedor">
         <div id="Bienvenidos">
         <h2>BIENVENIDO AL MEJOR LUGAR PARA SU SALUD</h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ducimus corporis mollitia ipsam doloremque in fugit nesciunt, deleniti ab modi temporibus accusamus eos at quisquam animi voluptates praesentium nostrum unde.</p>
+        <p> En nuestro hospital encontrara la mejor atención para su salud, a manos de excelentes profesionales de la salud usted podrá estar tranquilo. </p>
         </div>
     </section>
     
@@ -75,7 +75,7 @@
     
     <footer>
         <?php
-            pie(); 
+            pie();
         ?>
     </footer>
     

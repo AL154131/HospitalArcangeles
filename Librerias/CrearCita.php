@@ -1,4 +1,6 @@
 <?php
+	session_start(); 
+	include('Conexion.php');
 	$nombrePaciente = $_POST['nombrePaciente'];
 	$telefonoPaciente = $_POST['telefonoPaciente'];
 	$fecha = $_POST['año'] . "-" . $_POST['mes'] . "-" . $_POST['dia'];
@@ -12,25 +14,40 @@
 	$resultado = $mysqli -> query($consultaIdMedico);
 	$fila = $resultado -> fetch_assoc();
 	$idMedico = $fila['id'];
-	//echo "El id del medico es $idMedico";
-	//echo "Fecha = $fecha";
 
-	$consultaInsert = "INSERT INTO citas (nombrePaciente, telefonoPaciente, fecha, idMedico) VALUES
-					('$nombrePaciente', '$telefonoPaciente', '$fecha', $idMedico)";
+	$consultaDisponibilidad = "SELECT id FROM citas WHERE idMedico = $idMedico AND fecha = '$fecha'";
+	$resultado = $mysqli -> query($consultaDisponibilidad);
+	$numeroFilas = $resultado -> num_rows;
 	
-	if($mysqli -> query($consultaInsert)) {
-		echo "<h1>Felicidades has quedado registrado :)</h1>";
+	// Si NO hay una cita con la fecha y el medico indicado
+	if($numeroFilas == 0) {
+		$consultaInsert = "INSERT INTO citas (nombrePaciente, telefonoPaciente, fecha, idMedico) VALUES
+						('$nombrePaciente', '$telefonoPaciente', '$fecha', $idMedico)";
+		
+		// Si el INSERT se hizo correctamente
+		if($mysqli -> query($consultaInsert)) {
+		$consultaSelectUltimo = "SELECT id FROM citas ORDER BY id DESC LIMIT 1";
+		$resultado = $mysqli -> query($consultaSelectUltimo);
+		$fila = $resultado -> fetch_assoc();
+		$idCita = $fila['id']; 
+		$_SESSION['idCita'] = $idCita;
+		header("Location: CrearPdf.php");
+		}
+		else {
+			echo "
+			<script>  
+					alert('Lo sentimos hubo un error en el registro, intentelo de nuevo'); 
+					location.href = '../Paginas/Citas.php';  
+			</script>";
+			$mysqli -> close();		
+		}
 	}
 	else {
-		echo "<h1>Lo sentimos hubo un error en el registro :(</h1>";
+		echo "
+		<script> 
+			alert('La fecha y horario seleccionados ya estan ocupados');
+			location.href = '../Paginas/Citas.php';
+		</script>";
+		$mysqli -> close();
 	}
-	$mysqli -> close();
-	/*
-	echo $nombrePaciente . '<br>';
-	echo $telefonoPaciente . '<br>';
-	echo $fecha . '<br>';
-	echo $hora . '<br>';
-	echo $nombreMedico . '<br>';
-	echo $especialidad . '<br>';		
-			*/
 ?>

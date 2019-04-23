@@ -5,6 +5,6 @@
 	       . $mysqli->connect_error);
 	}
 	else {
-		//echo "Usted esta conectado";
+		echo "Usted esta conectado";
 	}
 ?>
