@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<title>Nosotros</title>
-	<link rel="stylesheet" href="../Estilos/Nosotros.css">
 	<link rel="stylesheet" href="../Estilos/Estilos.css">
     <link rel="stylesheet" href="../Estilos/fontello.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -17,11 +16,11 @@
         ?>
     </header>
     
-       <main>
+    <main>
         <section id="banner">
             <img src="../Imagenes/Banner/4.jpg" alt="">
             <div class="contenedor">
-                <h2>NOSOTROS</h2>
+                <h3>NOSOTROS</h3>
             </div>
         </section>
     </main>
@@ -147,12 +146,37 @@
     	        <p>Sientase libre de contactar a cualquier miembro de nuestro equipo: director general, administradores, coordinadores y jefes de diferentes departamentos.</p>
             </article>
             <article id="tab6">
-                <h2>Instalaciones</h2>
-    	        <p>Nuestras instalaciones están diseñadas para hacer más cómoda su estancia y la de sus familiares. Además de que cumplen con estándares de calidad.</p>
+                <h1>Instalaciones</h1>
+    	        <h2>
+               Nuestras instalaciones están diseñadas para hacer más cómoda su estancia y la de sus familiares. Además de que cumplen con estándares de calidad.
+               </h2>
+                <p>
+                Además de que cumplen con estándares de calidad que garantizan al médico su buena práctica profesional en un marco de excelencia y digno entorno laboral.
+                </p><br>
+                <p>
+                El hospital se distribuye principalmente en las siguientes áreas: consulta, urgencias, hospitalización, quirófano, servicios intermedios y generales.
+                </p><br>
+                <div class="slider">
+                    <input type="radio" id="sboton1" name="sradio">
+                    <label for="sboton1"></label>
+                    <input type="radio" id="sboton2" name="sradio">
+                    <label for="sboton2"></label>
+                    <input type="radio" id="sboton3" name="sradio">
+                    <label for="sboton3"></label>
+                    <input type="radio" id="sboton4" name="sradio">
+                    <label for="sboton4"></label>
+                    <ul>
+                        <li><img src="../Imagenes/Nosotros/Instalaciones/Instalaciones.jpg" alt=""></li>
+                        <li><img src="../Imagenes/Nosotros/Instalaciones/Salas.jpg" alt=""></li>
+                        <li><img src="../Imagenes/Nosotros/Instalaciones/Quirofano.jpg" alt=""></li>
+                        <li><img src="../Imagenes/Nosotros/Instalaciones/Ofta.jpg" alt=""></li>
+                    </ul>
+                </div>
             </article>
         </div>
         
     </div>
+   
     <footer>
         <?php
             pie();

@@ -20,7 +20,7 @@
             <div class="contenedor">
                 <h2>Protegiendo su salud</h2>
                 <p>La mejor proteccion para sus seres queridos</p>
-                <a href="">Encuentranos</a>
+                <a href="Paginas/Contacto.php#mapa">Encuentranos</a>
             </div>
         </section>
     </main>
