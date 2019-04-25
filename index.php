@@ -50,12 +50,12 @@
         </div>
     </section>
     
-    <section id="departamento">
+    <section id="departamentoindex">
         <h3>Departamentos que tienes a tu disposicion</h3>
         <div class="contenedor">
            <div class="dep-info">
                <img src="Imagenes/dentista.jpg" alt="">
-               <h4>Dentista</h4>
+               <h4>Odontologia</h4>
            </div>
            <div class="dep-info">
                <img src="Imagenes/Quirofano.jpg" alt="">

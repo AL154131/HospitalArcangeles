@@ -1,10 +1,10 @@
-#departamento{
+#departamentoindex{
     background: dodgerblue;
     color: #fff;
     text-align: center;
     padding: 20px;
 }
-#departamento .contenedor{
+#departamentoindex .contenedor{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -20,3 +20,67 @@
     border-radius: 50%;
     border: 5px solid #fff;
 }
+
+#Departamentos {
+    width: 1000px;
+    max-width: 90%;
+    margin: 0px auto;
+    height: auto;
+    padding: 20px;
+    text-align: justify;
+}
+.Cont{
+    width: 100%;
+    clear: both;
+}
+
+#Departamentos h1{
+    float: none;
+}
+
+.Dep{
+    width: 50%;
+    padding: 50px;
+    float: left;
+    clear: both;
+}
+
+.Dep h2{
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+}
+
+.Depd{
+    padding: 50px;
+    width: 50%;
+    float: right;
+}
+
+.Depd h2{
+    font-size: 18px;
+    border-bottom: 1px solid grey;
+}
+
+.Depima{
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+.Depima img{
+    width: 100%;
+    padding: 10px;
+}
+
+.Depimad{
+    width: 50%;
+    float: right;
+
+}
+
+.Depimad img{
+    width: 100%;
+    padding: 10px;
+}
+
+
