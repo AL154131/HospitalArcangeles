@@ -1,0 +1,42 @@
+<?php    
+    function insertLogin() {
+      echo '              
+          <button class="btn-login" onclick="openForm()">Acceder</button>
+              <div class="form-popup" id="div-login">
+                <form action="" class="form-container" id="form-login">
+                  <h1>Acceder</h1>
+                  <input type="text" placeholder="Email" name="email" required>
+                  <input type="password" placeholder="Password" name="psw" required>
+                  <button type="submit" class="btn-submit">Login</button>
+                  <button type="button" class="btn-cancel" onclick="closeForm()">Cerrar</button>
+                </form>
+              </div>
+          </div>
+          <script>
+            function openForm() {
+              document.getElementById("div-login").style.display = "block";
+            }
+
+            function closeForm() {
+              document.getElementById("div-login").style.display = "none";
+            }
+          </script>';
+    }
+    function insertSesion() {
+      require 'Conexion.php';
+      $id = $_SESSION['id'];
+      $rows = $mysqli->query("SELECT `nombre` FROM `medicos` WHERE `id` = '$id'");
+      $datos = $rows->fetch_assoc();
+      $nombre = $datos['nombre'];
+
+      echo '              
+          <div class="div-usuario">
+              <div class="form-container">
+                <h2> Dr.'.$nombre.'</h2>
+                <button type="button" class="btn-submit" onclick="window.location.href = \'Paginas/CitasMedicos.php\';">Mis citas</button>
+                <button type="button" class="btn-cancel" onclick="window.location.href = \'Librerias/logout.php\';">Cerrar sesión</button>
+              </div>
+            </div>
+          </div>';
+    }
+?>

@@ -5,15 +5,22 @@
     <title>Hospital</title>
     <link rel="stylesheet" href="Estilos/Estilos.css">
     <link rel="stylesheet" href="Estilos/fontello.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="Js/enviarLogin.js"></script>
 </head>
 <body>
     <header> 
         <?php 
-            include("Librerias/EncabezadoPie.phtml"); 
+            include("Librerias/EncabezadoPie.phtml");
+            include("Librerias/login.phtml");
             cabecera();
         ?>
     </header>
-    
+
     <main>
         <section id="banner">
             <img src="Imagenes/Banner/1.jpg" alt="">
@@ -76,6 +83,14 @@
     <footer>
         <?php
             pie();
+        ?>
+        <?php
+            session_start();
+            if (isset($_SESSION['id'])){
+              insertSesion();
+            }else{
+              insertLogin();
+            }
         ?>
     </footer>
     

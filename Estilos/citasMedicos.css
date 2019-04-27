@@ -1,0 +1,30 @@
+#tablaCitas {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tablaCitas tr:nth-child(even){background-color: #f2f2f2;}
+
+#tablaCitas tr:hover {background-color: #ddd;}
+
+#tablaCitas td, #tablaCitas th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tablaCitas th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.btnCancelarCita{
+  font-size: 15px;
+  color: crimson;
+}

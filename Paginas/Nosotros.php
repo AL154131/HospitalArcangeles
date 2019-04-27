@@ -13,6 +13,7 @@
         <?php 
             include("../Librerias/EncabezadoPie.phtml"); 
             subcabecera();
+            session_start();
         ?>
     </header>
     
@@ -180,7 +181,7 @@
     <footer>
         <?php
             pie();
-        ?>
+        ?>       
     </footer>
 </body>
 </html>
