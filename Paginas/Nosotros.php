@@ -38,7 +38,7 @@
         <div class="secciones">
             <article id="tab1">
                 
-                <h1>Quienes somos?</h1>
+                <h1>¿Quiénes somos?</h1>
                 <h2>
                     ❝Siempre que tenemos la oportunidad de ayudar a la vida humana, también tenemos la oportunidad de ofrecer calidad en la salud para así dar una mejor calidad de vida a todos nuestros pacientes.❞
                 </h2>
@@ -143,7 +143,7 @@
                 </ul>
             </article>
             <article id="tab5">
-                <h2>Personal</h2>
+                <h1>Personal</h1>
     	        <p>Sientase libre de contactar a cualquier miembro de nuestro equipo: director general, administradores, coordinadores y jefes de diferentes departamentos.</p>
     	        <div class="personal">
                 <table>
