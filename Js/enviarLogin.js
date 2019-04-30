@@ -23,7 +23,7 @@ jQuery(document).on('submit', '#form-login', function(event){
 	})
 	//si nuestra peticion falla
 	.fail(function(resp){
-		console.log(resp.responseText);
+		console.log('error10');
 	})
 	//siempre se ejecuta
 	.always(function(){
