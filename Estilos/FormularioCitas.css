@@ -10,7 +10,14 @@
 	background-color: dodgerblue;
 	color: white;
 }
-#Formulario input, select { height: 40px; }
+#Formulario input, select { 
+	height: 40px; 
+	border-radius: 0px; 
+	font-size: 15px;
+	border-style: none;
+
+}
+#Formulario select { border: 2px solid white; }
 #Formulario p {
 	display: inline-flex;
 	padding-top: 5px;
@@ -25,9 +32,9 @@
 
 #fecha {flex-wrap: wrap; width: 16.6%;}
 #fecha label {width: 100%;}
-#fecha select {width: 16.6%;}
+#fecha select {width: 20%; margin-right: 5px;}
 
-#horaConsulta select {width: 16.6%;}
+#horaConsulta select {width: 20%;}
 
 #boton {justify-content: flex-end;}
 #boton input {padding: 3px;}
