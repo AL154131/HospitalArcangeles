@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Nosotros</title>
+	<title>Contacto</title>
 	<link rel="stylesheet" href="../Estilos/Estilos.css">
     <link rel="stylesheet" href="../Estilos/fontello.css">
 </head>
@@ -24,8 +24,8 @@
     </main>
     
     <div class="Contacto">
-        <form action="Contacto.php">
         <h1>¿Tienes alguna pregunta sobre nuestros servicios?</h1>
+        <form id = "contact-form" class="contact" name = "contact=form" method="post" action="../Librerias/Correo.php">
         <div class="ContenedorF">
             <div class="row">
                 <div class="col-75">
@@ -34,12 +34,12 @@
             </div>
             <div class="row">
                 <div class="col-75">
-                    <input type="text" name="Apellido" placeholder="Apellido...">
+                    <input type="text" name="Telefono" placeholder="Telefono...">
                 </div>
             </div>
             <div class="row">
                 <div class="col-75">
-                    <input type="text" name="EMail" placeholder="e-mail">
+                    <input type="email" name="Email" required="required" placeholder="e-mail">
                 </div>
             </div><hr>
             <div class="row">

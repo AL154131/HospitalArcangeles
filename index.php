@@ -51,7 +51,7 @@
                 <h4>Con las mejores instalaciones</h4>
             </article>
             <article>
-                <img src="Imagenes/Personal.jpg" alt="">
+                <a href="/Paginas/Nosotros.php#tab4"><img src="Imagenes/Personal.jpg" alt=""></a>
                 <h4>Personal altamente calificado</h4>
             </article>
         </div>

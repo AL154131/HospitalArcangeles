@@ -30,7 +30,7 @@
 
 
 
-.ContenedorF input[type=text], select, textarea {
+.ContenedorF input[type=text],[type=email], select, textarea {
     width: 100%;
     padding: 5px;
     font-size: 18px;
