@@ -2,7 +2,9 @@
 	function cabecera() {
 		echo '
         	<div class="contenedor">
-            <a href="index.php"><h1 class="icon-hospital"></a>Hospital Arcángeles</h1>
+            <div class="encabezado">
+            <a href="index.php"><h1 class="icon-hospital">Hospital Arcángeles</h1>
+            </div></a>
             <a href="index.php"><input type="checkbox" id="menu-bar">
             <label class="icon-menu-outline" for="menu-bar"></label></a>
             <nav class="menu">
@@ -18,7 +20,9 @@
 	function subcabecera() {
 		echo '
         	<div class="contenedor">
-            <h1 class="icon-hospital">Hospital Arcángeles</h1>
+            <div class="encabezado">
+            <a href="../index.php"><h1 class="icon-hospital">Hospital Arcángeles</h1>
+            </div></a>
             <input type="checkbox" id="menu-bar">
             <label class="icon-menu-outline" for="menu-bar"></label>
             <nav class="menu">
@@ -35,12 +39,14 @@
         echo '
           <div class="contenedor">
               <p class="copy">Hospital Arcángeles &copy; 2019</p>
+              <hr><br>
               <div class="sociales">
                   <a class="icon-gplus-squared" chref=""></a>
                   <a class="icon-linkedin-1"href=""></a>
                   <a class="icon-mail-alt" href=""></a>
                   <a class="icon-twitter-squared" href=""></a>
-              </div>
+              <div>
         ';
     }
+
 ?>

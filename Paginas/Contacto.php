@@ -16,7 +16,7 @@
     
     <main>
         <section id="banner">
-            <img src="../Imagenes/Banner/3.jpg" alt="">
+            <img src="../Imagenes/Banner/4.jpg" alt="">
             <div class="contenedor">
                 <h3>Contacto</h3>
             </div>

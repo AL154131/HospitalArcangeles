@@ -83,3 +83,8 @@ footer .contenedor{
         width: 1000px;
     }
 }
+
+.encabezado a{
+    text-decoration: none;
+    color: azure;
+}

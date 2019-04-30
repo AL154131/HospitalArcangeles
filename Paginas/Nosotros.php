@@ -19,7 +19,7 @@
     
     <main>
         <section id="banner">
-            <img src="../Imagenes/Banner/4.jpg" alt="">
+            <img src="../Imagenes/Banner/3.jpg" alt="">
             <div class="contenedor">
                 <h3>NOSOTROS</h3>
             </div>
@@ -145,6 +145,46 @@
             <article id="tab5">
                 <h2>Personal</h2>
     	        <p>Sientase libre de contactar a cualquier miembro de nuestro equipo: director general, administradores, coordinadores y jefes de diferentes departamentos.</p>
+    	        <div class="personal">
+                <table>
+    	            <tr>
+    	                <th>Nombre</th>
+    	                <th>Especialidad</th>
+    	            </tr>
+    	            <tr>
+    	                <td>Dr. Juan Martinez Soto</td>
+    	                <td>General</td>
+    	            </tr>
+    	            <tr>
+    	               <td>Dr. Angel Ramirez Solis</td>
+    	               <td>General</td> 
+    	            </tr>
+    	            <tr>
+    	                <td>Dra. Paulina Herrera Martinez</td>
+    	                <td>General</td>
+    	            </tr>
+    	            <tr>
+    	               <td>Dra. Daniela Vargas</td>
+    	               <td>Ortopedista</td> 
+    	            </tr>
+    	            <tr>
+    	                <td>Dr. Alan Silva Andrade</td>
+    	                <td>Oftalmologo</td>
+    	            </tr>
+    	            <tr>
+    	                <td>Dra. Angela Reyes Diaz</td>
+    	                <td>Psiquiatra</td>
+    	            </tr>
+    	            <tr>
+    	                <td>Dra. Maria Lopez Lopez</td>
+    	                <td>Psiquiatra</td>
+    	            </tr>
+    	            <tr>
+    	                <td>Dr. Mario Garay Hernandez</td>
+    	                <td>Psiquiatra</td>
+    	            </tr>
+    	        </table>
+    	       </div>
             </article>
             <article id="tab6">
                 <h1>Instalaciones</h1>

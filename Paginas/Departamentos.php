@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Nosotros</title>
+	<title>Departamentos</title>
 	<link rel="stylesheet" href="../Estilos/Estilos.css">
     <link rel="stylesheet" href="../Estilos/fontello.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -18,7 +18,7 @@
     
     <main>
         <section id="banner">
-            <img src="../Imagenes/Banner/4.jpg" alt="">
+            <img src="../Imagenes/Banner/2.jpg" alt="">
             <div class="contenedor">
                 <h3>Departamentos</h3>
             </div>
@@ -96,11 +96,12 @@
                 <img src="../Imagenes/Departamentos/Sala.jpg" alt="">
             </div>
         </div>
-    </div>
-    
-    <footer>
+           <footer>
         <?php
             pie();
         ?>
     </footer>
 </body>
+    </div>
+    
+ 

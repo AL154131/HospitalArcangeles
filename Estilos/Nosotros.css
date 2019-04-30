@@ -78,6 +78,22 @@ ul.tabs li a{
     color: black;
 }
 
+.personal table{
+    width: 100%;
+    color: dodgerblue;
+    font-size: 28px;
+}
+
+.personal th{
+    color: white;
+    background: dodgerblue;
+}
+
+.personal td{
+    color: dodgerblue;
+    text-decoration: none;
+}
+
 
 .slider{
     width: 700px;
