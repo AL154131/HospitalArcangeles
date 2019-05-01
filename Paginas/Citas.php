@@ -27,8 +27,8 @@
 			<h2>Registra tu cita</h2>
 
 			<p id="datosPaciente">
-			<input type="text" name="nombrePaciente" placeholder="Nombre"> 
-			<input type="text" name="telefonoPaciente" placeholder="Número de teléfono"> 
+			<input type="text" name="nombrePaciente" placeholder="Nombre" required> 
+			<input type="text" name="telefonoPaciente" placeholder="Número de teléfono" required> 
 			</p>
 
 			<p id="areaConsulta">
@@ -132,7 +132,7 @@
 			</p>
 
 			<p id="boton">
-			<input type="submit" value="Confirmar cita"> 
+			<input id="btnCita" type="submit" value="Confirmar cita" disabled="true"> 
 			</p>	
 		</form>
 	</section>

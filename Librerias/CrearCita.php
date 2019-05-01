@@ -8,6 +8,8 @@
 	$nombreMedico = $_POST['nombreMedico'];
 	$especialidad = $_POST['especialidad'];
 
+	$fechaSinHora = $fecha;
+	$fechaActual = date("y-m-d");
 	$fecha = $fecha . " " . "$hora:00" ;
 
 	$consultaIdMedico = "SELECT id from medicos where nombre = '$nombreMedico'";
@@ -20,7 +22,7 @@
 	$numeroFilas = $resultado -> num_rows;
 	
 	// Si NO hay una cita con la fecha y el medico indicado
-	if($numeroFilas == 0) {
+	if(strtotime($fechaSinHora) >= strtotime($fechaActual) && $numeroFilas == 0) {
 		$consultaInsert = "INSERT INTO citas (nombrePaciente, telefonoPaciente, fecha, idMedico) VALUES
 						('$nombrePaciente', '$telefonoPaciente', '$fecha', $idMedico)";
 		
@@ -45,9 +47,10 @@
 	else {
 		echo "
 		<script> 
-			alert('La fecha y horario seleccionados ya estan ocupados');
+			alert('La fecha no esta disponible');
 			location.href = '../Paginas/Citas.php';
 		</script>";
 		$mysqli -> close();
 	}
+	
 ?>
