@@ -54,7 +54,7 @@
         </form>
         <br><br>
         <div class="ContactoN">
-            <h2>Estamos a su disposicion a traves de los siguientes medios</h2>
+            <h2>Estamos a su disposición a través de los siguientes medios.</h2>
             <table>
                     <tr>
                         <td>52(656)222 5825</td>

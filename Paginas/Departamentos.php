@@ -44,7 +44,7 @@
                 <h2>Servicio de Urgencias</h2>
                 <p>
                     Las 24 Horas del Día, Los 365 Días del Año<br>
-                    Contamos con personal de enfermería altamente capacitado certificación de soporte vital básico. Somos y seguiremos siendo la mejor elección para la atención de la Salud en Matamoros.
+                    Contamos con personal de enfermería altamente capacitado certificación de soporte vital básico. Somos y seguiremos siendo la mejor elección para la atención de la Salud en Ciudad Juárez.
                 </p>
             </div>
             <div class="Depimad">
@@ -53,7 +53,7 @@
         </div>
         <div class="Cont">
             <div class="Dep">
-                <h2>Quirofano</h2>
+                <h2>Quirófano</h2>
                 <p>
                     El Servicio de Quirófano es una unidad operativa compleja, donde convergen los procedimientos invasivos de todos los servicios quirúrgicos del Hospital de 
                     Alta Complejidad. Funciona las 24 horas para cirugías de emergencia y 12 horas para cirugías programadas. Está integrado funcional y jerárquicamente dependiente de la Dirección Médica.
@@ -76,7 +76,7 @@
         </div>
         <div class="Cont">
             <div class="Dep">
-                <h2>Servicio de Odontologia</h2>
+                <h2>Servicio de Odontología</h2>
                 <p>
                     En el consultorio de odontología encontrarás las técnicas de cepillados y los usos adecuados y aditamentos, el cepillado dental es el método de higiene por el cual se elimina la placa bacteriana de los dientes y se previenen las caries dentales o las enfermedades periodontales como la gingivitis.
                 </p>
