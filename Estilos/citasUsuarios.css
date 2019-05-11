@@ -29,6 +29,19 @@ main {
   color: white;
 }
 
+#tablaCitas .btn {
+  width: 100%;
+  height: 30px;
+  padding: 3px;
+  border-style: none;
+  color: white;
+  background-color: dodgerblue;
+}
+
+#tablaCitas .btn:hover {
+  opacity: .7;
+}
+
 #btnPDF{
   font-size: 15px;
   color: dodgerblue;

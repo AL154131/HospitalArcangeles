@@ -20,7 +20,7 @@
 		echo "<td>
 				<form method='post' action='CrearPdf2.php'>
 				<input type='hidden' value='$filas[id]' name='idCita'></input>
-				<input type='submit' value='Generar PDF'></input>
+				<input class='btn' type='submit' value='Generar PDF'></input>
 				</form></td>";
 		echo "</tr>";
 	}
