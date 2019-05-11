@@ -1,16 +1,12 @@
 <?php
-	session_start(); 
 	include('Conexion.php');
-	$nombrePaciente = $_POST['nombrePaciente'];
-	$telefonoPaciente = $_POST['telefonoPaciente'];
+	$idUsuario = $_SESSION['id'];
+	$nombreMedico = $_POST['nombreMedico'];
 	$fecha = $_POST['año'] . "-" . $_POST['mes'] . "-" . $_POST['dia'];
 	$hora = $_POST['hora'];
-	$nombreMedico = $_POST['nombreMedico'];
-	$especialidad = $_POST['especialidad'];
 
-	$fechaSinHora = $fecha;
 	$fechaActual = date("y-m-d");
-	$fecha = $fecha . " " . "$hora:00" ;
+	$fecha = $fecha . " " . "$hora" . ":00";
 
 	$consultaIdMedico = "SELECT id from medicos where nombre = '$nombreMedico'";
 	$resultado = $mysqli -> query($consultaIdMedico);
@@ -21,35 +17,26 @@
 	$resultado = $mysqli -> query($consultaDisponibilidad);
 	$numeroFilas = $resultado -> num_rows;
 	
+	$fecha2 = substr($fecha, 0, -9);
 	// Si NO hay una cita con la fecha y el medico indicado
-	if(strtotime($fechaSinHora) >= strtotime($fechaActual) && $numeroFilas == 0) {
-		$consultaInsert = "INSERT INTO citas (nombrePaciente, telefonoPaciente, fecha, idMedico) VALUES
-						('$nombrePaciente', '$telefonoPaciente', '$fecha', $idMedico)";
+	if(strtotime($fecha2) > strtotime($fechaActual) && $numeroFilas == 0) {
+		$consultaInsert = "INSERT INTO citas (idUsuario, idMedico, fecha) VALUES
+						($idUsuario, $idMedico, '$fecha')";
 		
 		// Si el INSERT se hizo correctamente
 		if($mysqli -> query($consultaInsert)) {
-		$consultaSelectUltimo = "SELECT id FROM citas ORDER BY id DESC LIMIT 1";
-		$resultado = $mysqli -> query($consultaSelectUltimo);
-		$fila = $resultado -> fetch_assoc();
-		$idCita = $fila['id']; 
-		$_SESSION['idCita'] = $idCita;
-		header("Location: CrearPdf.php");
+			echo "<script> alert('Su cita a quedado registrada consulta tu comprobante en Mis citas') </script>";
+			$mysqli -> close();
 		}
 		else {
 			echo "
-			<script>  
-					alert('Lo sentimos hubo un error en el registro, intentelo de nuevo'); 
-					location.href = '../Paginas/Citas.php';  
-			</script>";
+			<script> alert('Lo sentimos hubo un error en el registro, intentelo de nuevo'); </script>
+			";
 			$mysqli -> close();		
 		}
 	}
 	else {
-		echo "
-		<script> 
-			alert('La fecha no esta disponible');
-			location.href = '../Paginas/Citas.php';
-		</script>";
+		echo "<script> alert('La fecha no esta disponible'); </script>";
 		$mysqli -> close();
 	}
 	

@@ -6,7 +6,7 @@
 		$email = $_POST['email'];
 		$passw = $_POST['psw'];
 
-		$rows = $mysqli->query("SELECT `id` FROM `medicos` WHERE `correo` = '$email' AND `password` = '$passw'");
+		$rows = $mysqli->query("SELECT `id` FROM `usuarios` WHERE `correo` = '$email' AND `contra` = '$passw'");
 
 		if($rows->num_rows == 1):
 			$datos = $rows->fetch_assoc();
@@ -16,6 +16,6 @@
 			echo json_encode(array('error' => true));
 		endif;
 	}else{
-		header('Location: ../index.php');
+		header('Location: http://localhost/HospitalArcangeles/');
 	}
 ?>

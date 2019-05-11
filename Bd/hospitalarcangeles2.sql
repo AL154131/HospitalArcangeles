@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 10-05-2019 a las 04:16:27
+-- Tiempo de generación: 11-05-2019 a las 05:21:29
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -36,6 +36,15 @@ CREATE TABLE IF NOT EXISTS `beneficios` (
   KEY `idEspecialidad` (`idEspecialidad`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `beneficios`
+--
+
+INSERT INTO `beneficios` (`idPlan`, `idEspecialidad`) VALUES
+(1, 1),
+(1, 2),
+(2, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -51,7 +60,19 @@ CREATE TABLE IF NOT EXISTS `citas` (
   PRIMARY KEY (`id`),
   KEY `idMedico` (`idMedico`),
   KEY `idUsuario` (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=280 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id`, `idUsuario`, `idMedico`, `fecha`) VALUES
+(1, 3, 1, '2019-05-11 08:00:00'),
+(4, 3, 1, '2019-05-11 09:00:00'),
+(5, 3, 1, '2019-05-11 10:00:00'),
+(6, 3, 1, '2019-05-11 11:00:00'),
+(7, 3, 1, '2019-05-11 12:00:00'),
+(8, 3, 1, '2019-05-11 13:00:00');
 
 -- --------------------------------------------------------
 
@@ -66,6 +87,15 @@ CREATE TABLE IF NOT EXISTS `especialidades` (
   `costoCita` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `especialidades`
+--
+
+INSERT INTO `especialidades` (`id`, `nombre`, `costoCita`) VALUES
+(1, 'General', '300.00'),
+(2, 'Oftalmologo', '500.00'),
+(3, 'Ortopedista', '1000.00');
 
 -- --------------------------------------------------------
 
@@ -85,7 +115,17 @@ CREATE TABLE IF NOT EXISTS `medicos` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `correo` (`correo`),
   KEY `fk_especialidad` (`especialidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `medicos`
+--
+
+INSERT INTO `medicos` (`id`, `correo`, `password`, `nombre`, `especialidad`, `consultorio`, `telefono`) VALUES
+(1, 'juan.martinez@hospitalarcngeles.com', '111', 'Juan Martinez Soto', 1, '101', '6563432122'),
+(2, 'adrian.garcia@hospitalarcangeles.com', '222', 'Adrian Garcia', 2, '102', '6564433456'),
+(3, 'roberto.gomez@hospitalarcangeles.com', '333', 'Roberto Gomez', 3, '200', '6563322111'),
+(4, 'karla.estrada@hospitalarcangeles.com', '111', 'Karla Estrada Solis', 1, '100', '6567766666');
 
 -- --------------------------------------------------------
 
@@ -100,6 +140,14 @@ CREATE TABLE IF NOT EXISTS `planes` (
   `porcentajeDesc` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `planes`
+--
+
+INSERT INTO `planes` (`id`, `nombre`, `porcentajeDesc`) VALUES
+(1, 'Basico', '0.15'),
+(2, 'Medio', '0.30');
 
 -- --------------------------------------------------------
 
@@ -120,7 +168,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `cvv` varchar(5) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tipoPlan` (`plan`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `correo`, `contra`, `plan`, `nombre`, `telefono`, `numTarjeta`, `fechaVencimiento`, `cvv`) VALUES
+(3, 'veramartin293@gmail.com', '123', 1, 'Martin Vera', '6560394874', '123456789', '2019-05-06', '123');
 
 --
 -- Restricciones para tablas volcadas

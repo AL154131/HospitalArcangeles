@@ -5,13 +5,20 @@
 	<title>Nosotros</title>
 	<link rel="stylesheet" href="../Estilos/Estilos.css">
     <link rel="stylesheet" href="../Estilos/fontello.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.js"
+      integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+      crossorigin="anonymous">
+    </script>
     <script src="../Js/Nosotros.js"></script>
+    <script type="text/javascript" src="../Js/enviarLogin.js"></script>
 </head>
 <body>
     <header> 
         <?php 
             include("../Librerias/EncabezadoPie.phtml"); 
+            include("../Librerias/login.phtml");
             subcabecera();
             session_start();
         ?>
@@ -221,7 +228,15 @@
     <footer>
         <?php
             pie();
-        ?>       
+        ?>  
+        <?php
+            //session_start();
+            if (isset($_SESSION['id'])){
+              insertSesion();
+            }else{
+              insertLogin();
+            }
+        ?>     
     </footer>
 </body>
 </html>

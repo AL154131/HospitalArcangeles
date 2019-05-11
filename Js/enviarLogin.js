@@ -4,7 +4,7 @@ jQuery(document).on('submit', '#form-login', function(event){
 	event.preventDefault(); // evitamos que los datos se manden por defecto 
 
 	jQuery.ajax({
-		url: 'Librerias/login.php', //la url de nuestro archivo
+		url: 'http://localhost/HospitalArcangeles/Librerias/login.php', //la url de nuestro archivo
 		type: 'POST', //el tipo de envio de datos
 		dataType: 'json', //los datos que deseamos recibir de php
 		data: $(this).serialize(), //los datos que deseamos enviar a php, con serialize obtenemos una cadena de envio
@@ -16,7 +16,7 @@ jQuery(document).on('submit', '#form-login', function(event){
 	//cuando nuestra peticion se completa
 	.done(function(respuesta){
 		if(!respuesta.error){
-			location.href = 'index.php';
+			location.href = 'http://localhost/HospitalArcangeles/';
 		}else{
 			alert("Mail o password incorrectos");
 		}
