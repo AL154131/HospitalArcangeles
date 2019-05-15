@@ -1,8 +1,10 @@
 <?php
+	if(!isset($_SESSION['idUsuario'])) {
+		header("Location: ../");
+	}
 	include("Conexion.php");
 	
-	$idUsuario = $_SESSION['id'];
-	echo "EL usuario esta"; 
+	$idUsuario = $_SESSION['idUsuario'];
 
 	$consultaCitas = "SELECT c.id, m.nombre, m.consultorio, m.telefono, c.fecha 
 						FROM medicos m, citas c

@@ -1,12 +1,12 @@
 <?php
 	include('../Librerias/Conexion.php'); 
 
-	if(!isset($_SESSION['id'])) {
+	if(!isset($_SESSION['idUsuario'])) {
 		$consultaEspecialidades = "SELECT nombre FROM especialidades WHERE nombre = 'General'";
 		
 	}
 	else {
-	 	$id = $_SESSION['id'];
+	 	$id = $_SESSION['idUsuario'];
 
 		$consultaPlan = "SELECT plan FROM usuarios WHERE id = $id";
 		$resultado = $mysqli -> query($consultaPlan);

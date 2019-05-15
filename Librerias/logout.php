@@ -1,5 +1,5 @@
 <?php
 	session_start();
-	session_destroy();
-	header('Location: http://localhost/HospitalArcangeles/')
+	unset($_SESSION['idUsuario']);
+	header('Location: http://localhost/HospitalArcangeles/');
 ?>

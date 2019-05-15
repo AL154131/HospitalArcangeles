@@ -21,7 +21,7 @@
             include("../Librerias/EncabezadoPie.phtml"); 
             include("../Librerias/login.phtml");
             session_start();
-            if(!isset($_SESSION['id'])) {
+            if(!isset($_SESSION['idUsuario'])) {
             	header("Location: http://localhost/HospitalArcangeles");
             }
             subcabecera();
@@ -48,7 +48,7 @@
 		<?php pie(); ?>
         <?php
             //session_start();
-            if (isset($_SESSION['id'])){
+            if (isset($_SESSION['idUsuario'])){
               insertSesion();
             }else{
               insertLogin();

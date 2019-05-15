@@ -24,7 +24,7 @@
     }
     function insertSesion() {
       require 'Conexion.php';
-      $id = $_SESSION['id'];
+      $id = $_SESSION['idUsuario'];
       $rows = $mysqli->query("SELECT `nombre` FROM `usuarios` WHERE `id` = '$id'");
       $datos = $rows->fetch_assoc();
       $nombre = $datos['nombre'];

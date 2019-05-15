@@ -10,7 +10,7 @@
 
 		if($rows->num_rows == 1):
 			$datos = $rows->fetch_assoc();
-			$_SESSION['id'] = $datos['id'];
+			$_SESSION['idUsuario'] = $datos['id'];
 			echo json_encode(array('error' => false));
 		else:
 			echo json_encode(array('error' => true));

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['id']) || !isset($_POST['idCita'])) {
+	if (!isset($_SESSION['idUsuario']) || !isset($_POST['idCita'])) {
 		header("Location: ../");
 	}
 	require_once '../Librerias/dompdf/autoload.inc.php';

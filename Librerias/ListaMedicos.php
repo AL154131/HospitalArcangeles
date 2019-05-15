@@ -1,4 +1,7 @@
 <?php
+	if(!isset($_POST['especialidad'])) {
+		header('Location: ../');
+	}
 	include('Conexion.php');
 
 	$especialidad = $_POST['especialidad'];

@@ -1,13 +1,16 @@
 <?php
 	include('Conexion.php');
 
-	if(!isset($_SESSION['id'])) {
+	if(!isset($_POST['nombreMedico'])) {
+		header("Location: ../");
+	}
+	else if(!isset($_SESSION['idUsuario'])) {
 		$idUsuario = 0;
 		$_SESSION['idInvitado'] = 0;
 		$_SESSION['nombrePaciente'] = $_POST['nombrePaciente'];
 	}
 	else {
-		$idUsuario = $_SESSION['id'];
+		$idUsuario = $_SESSION['idUsuario'];
 	}
 	
 	$nombreMedico = $_POST['nombreMedico'];
@@ -34,7 +37,7 @@
 		
 		// Si el INSERT se hizo correctamente
 		if($mysqli -> query($consultaInsert)) {
-			if(!isset($_SESSION['id'])) {
+			if(!isset($_SESSION['idUsuario'])) {
 				header("Location: ../Paginas/PdfSinUsuario.php");
 			}
 			else {

@@ -31,7 +31,7 @@
 
 	<section id = "Formulario">
 		<?php 
-		if(isset($_SESSION['id'])) {
+		if(isset($_SESSION['idUsuario'])) {
 			include("../Librerias/FormUsuarios.php");
 		}
 		else {
@@ -44,7 +44,7 @@
 		<?php pie(); ?>
         <?php
             //session_start();
-            if (isset($_SESSION['id'])){
+            if (isset($_SESSION['idUsuario'])){
               insertSesion();
             }else{
               insertLogin();
