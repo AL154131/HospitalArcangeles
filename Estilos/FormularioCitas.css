@@ -25,17 +25,21 @@
 	
 }
 #datosPaciente {justify-content: space-between;}
-#datosPaciente input {width: 49%;}
+#datosPaciente input {width: 100%;}
 
-#areaConsulta, #medicosDeArea, #horaConsulta {flex-direction: column;}
+#areaConsulta, #medicosDeArea {flex-direction: column;}
 #areaConsulta select, #medicosDeArea select {width: 100%;}
 
 #fecha {flex-wrap: wrap; width: 16.6%;}
 #fecha label {width: 100%;}
 #fecha select {width: 20%; margin-right: 5px;}
 
-#horaConsulta select {width: 20%;}
+#horaConsulta select, #costoCita input {width: 25%;}
 
 #boton {justify-content: flex-end;}
 #boton input {padding: 3px;}
 
+#horaConsulta label {width: 100%;}
+#horaConsulta {flex-wrap: wrap;}
+
+#errorFecha {margin-left: 3px; /*padding-top: 2%;*/}

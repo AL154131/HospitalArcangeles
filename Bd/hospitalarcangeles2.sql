@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-05-2019 a las 05:21:29
+-- Tiempo de generación: 15-05-2019 a las 05:27:37
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.14
 
@@ -58,21 +58,20 @@ CREATE TABLE IF NOT EXISTS `citas` (
   `idMedico` int(11) NOT NULL,
   `fecha` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `idMedico` (`idMedico`),
-  KEY `idUsuario` (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+  KEY `idUsuario` (`idUsuario`),
+  KEY `idMedico` (`idMedico`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `citas`
 --
 
 INSERT INTO `citas` (`id`, `idUsuario`, `idMedico`, `fecha`) VALUES
-(1, 3, 1, '2019-05-11 08:00:00'),
-(4, 3, 1, '2019-05-11 09:00:00'),
-(5, 3, 1, '2019-05-11 10:00:00'),
-(6, 3, 1, '2019-05-11 11:00:00'),
-(7, 3, 1, '2019-05-11 12:00:00'),
-(8, 3, 1, '2019-05-11 13:00:00');
+(51, 1, 4, '2019-05-16 08:00:00'),
+(52, 0, 4, '2019-05-16 09:00:00'),
+(53, 0, 4, '2019-05-16 10:00:00'),
+(54, 0, 4, '2019-05-16 11:00:00'),
+(55, 1, 2, '2019-05-16 08:00:00');
 
 -- --------------------------------------------------------
 
@@ -105,7 +104,7 @@ INSERT INTO `especialidades` (`id`, `nombre`, `costoCita`) VALUES
 
 DROP TABLE IF EXISTS `medicos`;
 CREATE TABLE IF NOT EXISTS `medicos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `correo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
@@ -115,14 +114,14 @@ CREATE TABLE IF NOT EXISTS `medicos` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `correo` (`correo`),
   KEY `fk_especialidad` (`especialidad`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `medicos`
 --
 
 INSERT INTO `medicos` (`id`, `correo`, `password`, `nombre`, `especialidad`, `consultorio`, `telefono`) VALUES
-(1, 'juan.martinez@hospitalarcngeles.com', '111', 'Juan Martinez Soto', 1, '101', '6563432122'),
+(1, 'juan.martinez@hospitalarcangeles.com', '111', 'Juan Martinez Soto', 1, '101', '6563432122'),
 (2, 'adrian.garcia@hospitalarcangeles.com', '222', 'Adrian Garcia', 2, '102', '6564433456'),
 (3, 'roberto.gomez@hospitalarcangeles.com', '333', 'Roberto Gomez', 3, '200', '6563322111'),
 (4, 'karla.estrada@hospitalarcangeles.com', '111', 'Karla Estrada Solis', 1, '100', '6567766666');
@@ -146,6 +145,7 @@ CREATE TABLE IF NOT EXISTS `planes` (
 --
 
 INSERT INTO `planes` (`id`, `nombre`, `porcentajeDesc`) VALUES
+(0, 'sinPlan', '0.00'),
 (1, 'Basico', '0.15'),
 (2, 'Medio', '0.30');
 
@@ -157,7 +157,7 @@ INSERT INTO `planes` (`id`, `nombre`, `porcentajeDesc`) VALUES
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `correo` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `contra` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `plan` int(11) NOT NULL,
@@ -168,14 +168,15 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `cvv` varchar(5) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `tipoPlan` (`plan`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `correo`, `contra`, `plan`, `nombre`, `telefono`, `numTarjeta`, `fechaVencimiento`, `cvv`) VALUES
-(3, 'veramartin293@gmail.com', '123', 1, 'Martin Vera', '6560394874', '123456789', '2019-05-06', '123');
+(0, NULL, NULL, 0, 'Invitado', NULL, '', '2019-05-01', ''),
+(1, 'veramartin293@gmail.com', '123', 1, 'Martin Vera', '6563445498', '6456787654345678', '2019-05-17', '123');
 
 --
 -- Restricciones para tablas volcadas
@@ -192,8 +193,8 @@ ALTER TABLE `beneficios`
 -- Filtros para la tabla `citas`
 --
 ALTER TABLE `citas`
-  ADD CONSTRAINT `citas_ibfk_1` FOREIGN KEY (`idMedico`) REFERENCES `medicos` (`id`),
-  ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`id`);
+  ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`id`),
+  ADD CONSTRAINT `citas_ibfk_3` FOREIGN KEY (`idMedico`) REFERENCES `medicos` (`id`);
 
 --
 -- Filtros para la tabla `medicos`

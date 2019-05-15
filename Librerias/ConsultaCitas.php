@@ -18,7 +18,7 @@
 		echo "<td>" . $filas['fecha'] . "</td>";
 
 		echo "<td>
-				<form method='post' action='CrearPdf2.php'>
+				<form method='post' action='PdfConUsuario.php'>
 				<input type='hidden' value='$filas[id]' name='idCita'></input>
 				<input class='btn' type='submit' value='Generar PDF'></input>
 				</form></td>";

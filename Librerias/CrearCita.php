@@ -1,6 +1,15 @@
 <?php
 	include('Conexion.php');
-	$idUsuario = $_SESSION['id'];
+
+	if(!isset($_SESSION['id'])) {
+		$idUsuario = 0;
+		$_SESSION['idInvitado'] = 0;
+		$_SESSION['nombrePaciente'] = $_POST['nombrePaciente'];
+	}
+	else {
+		$idUsuario = $_SESSION['id'];
+	}
+	
 	$nombreMedico = $_POST['nombreMedico'];
 	$fecha = $_POST['año'] . "-" . $_POST['mes'] . "-" . $_POST['dia'];
 	$hora = $_POST['hora'];
@@ -25,8 +34,13 @@
 		
 		// Si el INSERT se hizo correctamente
 		if($mysqli -> query($consultaInsert)) {
-			echo "<script> alert('Su cita a quedado registrada consulta tu comprobante en Mis citas') </script>";
-			$mysqli -> close();
+			if(!isset($_SESSION['id'])) {
+				header("Location: ../Paginas/PdfSinUsuario.php");
+			}
+			else {
+				echo "<script> alert('Su cita a quedado registrada consulta tu comprobante en Mis citas') </script>";
+				$mysqli -> close();
+			}
 		}
 		else {
 			echo "

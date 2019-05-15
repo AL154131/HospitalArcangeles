@@ -34,7 +34,9 @@
 		if(isset($_SESSION['id'])) {
 			include("../Librerias/FormUsuarios.php");
 		}
-		else { echo "Inicia sesion para realizar una cita";	}	  
+		else {
+			include("../Librerias/FormSinCuenta.php");	
+		}	  
 		?>
 	</section>
 

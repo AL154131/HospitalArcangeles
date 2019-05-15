@@ -2,8 +2,12 @@
 			
 			<h2>Registra tu cita</h2>
 
+			<p id="datosPaciente">
+			<input type="text" name="nombrePaciente" placeholder="Nombre" required>  
+			</p>
+
 			<p id="areaConsulta">
-			<label>Especialidad:</label>
+			<label>Área de consulta:</label>
 			<select id="ListaEspecialidades" name="especialidad"> 
 			<?php include("../Librerias/ListaEspecialidades.php");  ?>
 			</select> 			
@@ -101,12 +105,11 @@
 			<span id="errorFecha"></span>
 			</p>
 
-			
 			<div id="costoCita"></div>
 
-			<script type="text/javascript" src="../Js/comprobarFecha.js"></script>
-			<script type="text/javascript" src="../Js/costoCita.js"></script> 
-			
+			<script type="text/javascript" src="../Js/comprobarFecha.js"></script> 
+			<script type="text/javascript" src="../Js/costoCita.js"></script>
+
 			<p id="boton">
 			<input id="btnCita" type="submit" value="Confirmar cita" disabled="true"> 
 			</p>	

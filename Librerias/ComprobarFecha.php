@@ -27,13 +27,13 @@
 		$f1 = strtotime($fecha); $f2 = strtotime($fechaActual);
 		if($numeroFilas == 0 && (strtotime($fecha) > strtotime($fechaActual))) {
 			echo "
-			<p id='fechaBien'>La fecha esta disponible.</p>
+			La fecha esta disponible.
 			<script> document.getElementById('btnCita').disabled = false; </script>
 			";
 		}
 		else {
 			echo "
-			<p id='fechaMal'>La fecha no está disponible.</p>
+			La fecha no está disponible.
 			<script> document.getElementById('btnCita').disabled = true; </script>
 			";
 		}
