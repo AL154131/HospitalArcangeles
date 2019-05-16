@@ -35,7 +35,7 @@
        <section>
        <div class="login">
 		<div class = "Registro">
-			<form action="registrar-usuario.php" method="POST">
+			<form action="../Librerias/registro-usuarios.php" method="POST">
 				<div class="Usuarios">
 				<label for="Nombre">Nombre</label>
 				<div><input type="text" class="" maxlength="20" placeholder="Ingresa tu Nombre" name="nombre" required></div>
@@ -145,7 +145,7 @@
             </div>
             <div class="Usuarios">
 				<label for="date">Fecha de Vencimiento</label>
-                    <div><input type="month" class="" placeholder="Ingresa la fecha de vencimiento de tu tarjeta" name="vencimiento" required></div>
+                    <div><input type="date" class="" placeholder="Ingresa la fecha de vencimiento de tu tarjeta" name="vencimiento" required></div>
                 </div>
             <center>
                 <div>
