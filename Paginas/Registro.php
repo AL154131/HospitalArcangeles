@@ -37,12 +37,8 @@
 		<div class = "Registro">
 			<form action="../Librerias/registro-usuarios.php" method="POST">
 				<div class="Usuarios">
-				<label for="Nombre">Nombre</label>
+				<label for="Nombre">Nombre Completo</label>
 				<div><input type="text" class="" maxlength="20" placeholder="Ingresa tu Nombre" name="nombre" required></div>
-				</div>
-				<div class="Usuarios">
-				<label for="Apellido">Apellido</label>
-				<div><input type="text" class="" maxlength="20" placeholder="Ingresa tu Apellido" name="apellido" required></div>
 				</div>
 				<div class="Usuarios">
 				<label for="email">Email</label>
