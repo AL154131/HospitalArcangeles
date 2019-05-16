@@ -207,7 +207,7 @@ INSERT INTO `planes` (`id`, `nombre`, `porcentajeDesc`) VALUES
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `correo` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `contra` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `plan` int(11) NOT NULL,

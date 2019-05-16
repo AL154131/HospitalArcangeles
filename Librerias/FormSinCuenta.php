@@ -1,7 +1,6 @@
 		<form method="post" action="Citas.php">
 			
-			<h2>Registra tu cita</h2>
-            <h3>Inicia sesion o <a href="../Paginas/Registro.php">Registrate</a></h3>
+			<h2>Registra tu cita o <a href="Registro.php">Registrate Tu!</a></h2>
 			<p id="datosPaciente">
 			<input type="text" name="nombrePaciente" placeholder="Nombre" required>  
 			</p>
