@@ -10,7 +10,7 @@
 	background-color: dodgerblue;
 	color: white;
 }
-#Formulario input, select { 
+#Formulario input, #Formulario select { 
 	height: 40px; 
 	border-radius: 0px; 
 	font-size: 15px;

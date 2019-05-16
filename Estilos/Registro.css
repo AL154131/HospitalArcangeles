@@ -18,7 +18,7 @@
     border-radius: 50%;
 }
 
-.Usuarios input,select{
+.Usuarios input, .Usuarios select{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;

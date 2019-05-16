@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Citas</title>
+	
 	<link rel="stylesheet" href="../Estilos/Estilos.css">
     <link rel="stylesheet" href="../Estilos/fontello.css">
     <link rel="stylesheet" type="text/css" href="../Estilos/FormularioCitas.css">
