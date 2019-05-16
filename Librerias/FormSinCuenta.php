@@ -1,7 +1,7 @@
 		<form method="post" action="Citas.php">
 			
 			<h2>Registra tu cita</h2>
-
+            <h3>Inicia sesion o <a href="../Paginas/Registro.php">Registrate</a></h3>
 			<p id="datosPaciente">
 			<input type="text" name="nombrePaciente" placeholder="Nombre" required>  
 			</p>
@@ -113,4 +113,5 @@
 			<p id="boton">
 			<input id="btnCita" type="submit" value="Confirmar cita" disabled="true"> 
 			</p>	
+			
 		</form>

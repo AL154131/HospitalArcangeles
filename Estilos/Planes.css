@@ -1,0 +1,88 @@
+.planes{
+    width: 900px;
+    margin:0px auto;
+}
+
+.plan{
+    width: 290px;
+    height: 320px;
+    float: left;
+    margin-right: 10px;
+}
+
+.basico{
+    background-color: #BFD04F;
+    height: 57.6px;
+    margin: 1px;
+}
+
+
+.basicoben{
+    width: 290px;
+    height: 132px;
+    margin: 10px;
+    color: #BFD04F;
+}
+
+.plan ul{
+    list-style-position: inside;
+}
+
+.basicosto{
+    font-size: 30px;
+    color: whitesmoke;
+    background-color: #BFD04F;
+    text-align: center;
+    height: 90px;
+
+}
+
+.escencial{
+    background-color: #ffbf3f;
+    height: 57.6px;
+    margin: 1px;
+}
+
+.plan h3{
+    font-size: 30px;
+    padding: 5px;
+    color: white;
+}
+
+.escencialben{
+    width: 290px;
+    height: 132px;
+    margin: 10px;
+    color: #ffbf3f;
+}
+
+.escencialcosto{
+    font-size: 30px;
+    color: whitesmoke;
+    background-color: #ffbf3f;
+    text-align: center;
+    height: 90px;
+}
+
+.premium{
+    background-color: #59cbe8;
+    height: 57.6px;
+    margin: 1px;
+}
+
+.premiumben{
+    width: 290px;
+    height: 132px;
+    margin: 10px;
+    color: #59cbe8;
+    
+}
+
+.premiumcosto{
+    font-size: 30px;
+    color: whitesmoke;
+    background-color: #59cbe8;
+    text-align: center;
+    height: 90px;
+}
+
