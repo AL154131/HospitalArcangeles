@@ -16,6 +16,6 @@
 			echo json_encode(array('error' => true));
 		endif;
 	}else{
-		header('Location: ../');
+		header('Location: http://localhost/HospitalArcangeles/');
 	}
 ?>

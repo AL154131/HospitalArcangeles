@@ -8,7 +8,7 @@
 
 	$consultaCitas = "SELECT c.id, m.nombre, m.consultorio, m.telefono, c.fecha 
 						FROM medicos m, citas c
-						WHERE c.idUsuario = $idUsuario AND m.id = c.idMedico ORDER BY c.id";
+						WHERE c.idUsuario = $idUsuario AND m.id = c.idMedico";
 	$resultado = $mysqli -> query($consultaCitas);
 	
 	while($filas = $resultado -> fetch_assoc()) {

@@ -22,7 +22,7 @@
             include("../Librerias/login.phtml");
             session_start();
             if(!isset($_SESSION['idUsuario'])) {
-            	header("Location: ../");
+            	header("Location: http://localhost/HospitalArcangeles");
             }
             subcabecera();
 		?>
