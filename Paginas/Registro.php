@@ -141,7 +141,7 @@
             </div>
             <div class="Usuarios">
 				<label for="cvv">CVV</label>
-                <div><input type="text" class="" maxlength="3" placeholder="Ingresa tu CVV" name="CVV" required></div>
+                <div><input type="text" class="" maxlength="3" placeholder="Ingresa tu CVV" name="cvv" required></div>
             </div>
             <div class="Usuarios">
 				<label for="date">Fecha de Vencimiento</label>
